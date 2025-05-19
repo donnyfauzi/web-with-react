@@ -86,7 +86,7 @@ export default function Home() {
       </div>
 
       {/* Hero 2 */}
-      <div className="w-full relative py-16 px-10 rounded-xl shadow-lg text-gray-800"
+      <div id='hero2' className="w-full relative py-16 px-10 rounded-xl shadow-lg text-gray-800"
         style={{
           backgroundImage:`linear-gradient(to top, rgba(255,255,255,0) 85%, rgba(255,255,255,1)), linear-gradient(to bottom, rgba(255,255,255,0) 85%, rgba(252,252,252,2)), url(${bgImage4})`,
           backgroundSize: 'cover',
@@ -211,7 +211,7 @@ export default function Home() {
         </div>
       </div>
 
-      <a href="#kontak" className="fixed bottom-4 right-4 bg-sky-400 text-white px-5 py-3 rounded-md shadow-lg hover:bg-blue-700 transition-all z-50 flex items-center gap-2">
+      <a href="#kontak" className="fixed bottom-0 right-2 bg-blue-800 text-white px-4 py-2 rounded-md shadow-lg hover:bg-blue-700 transition-all z-50 flex items-center gap-2">
         <FontAwesomeIcon icon={faComment} />
         Contact Us
       </a>
