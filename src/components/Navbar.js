@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-50/50 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <a href="/" className="flex items-center"><img src={logo} alt="MyBrand Logo" className="w-32 h-auto mt-[-25px] ml-[-10px] transition-all duration-300"/></a>
+        <a href="/" className="flex items-center"><img src={logo} alt="MyBrand Logo" className="w-32 h-auto mt-[-10px] ml-[-10px] transition-all duration-300"/></a>
 
         {/* Menu button for mobile */}
         <div className="flex items-center sm:hidden">
