@@ -39,6 +39,13 @@ export default function Home() {
 
   return (
     <div className="relative">
+      <div className="absolute top-0 left-0 w-full h-[100vh] bg-slate-50/70 z-[-1]"
+        style={{
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       {/* Hero Gambar/Video */}
       <div className="relative w-full h-screen pt-16 overflow-hidden rounded-br-[300px] rounded-tl-[300px]">
         {slides[currentSlide].type === 'video' ? (
@@ -70,8 +77,7 @@ export default function Home() {
         <div
           className="absolute top-0 right-0 h-full w-1/3 rounded-xl"
           style={{
-            backgroundImage: `linear-gradient(to top, rgba(255,255,255,0) 85%, rgba(255,255,255,1)), 
-                            linear-gradient(to bottom, rgba(255,255,255,0) 85%, rgba(252,252,252,2)), 
+            backgroundImage: ` 
                             url(${bgImage4})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -154,10 +160,8 @@ export default function Home() {
           {/* Background kanan */}
           <div
             className="absolute inset-0 w-full h-full rounded-xl"
-            style={{
-              backgroundImage: `linear-gradient(to top, rgba(255,255,255,0) 85%, rgba(255,255,255,1)), 
-                              linear-gradient(to bottom, rgba(255,255,255,0) 85%, rgba(252,252,252,2)), 
-                              url(${bgImage5})`,
+          style={{
+              backgroundImage: `url(${bgImage5})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
