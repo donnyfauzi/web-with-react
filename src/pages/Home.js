@@ -69,7 +69,7 @@ export default function Home() {
       <div className="w-full relative py-16 px-10 rounded-xl text-gray-800 overflow-hidden min-h-[500px]">
         {/* Background kanan */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 w-full h-full"
           style={{
             backgroundImage: `url(${bgImage4})`,
             backgroundSize: 'cover',
