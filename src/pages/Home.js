@@ -39,13 +39,7 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <div className="absolute top-0 left-0 w-full h-[100vh] bg-slate-50/70 z-[-1]"
-        style={{
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
+      
       {/* Hero Gambar/Video */}
       <div className="relative w-full h-screen pt-16 overflow-hidden rounded-br-[300px] rounded-tl-[300px]">
         {slides[currentSlide].type === 'video' ? (
@@ -75,10 +69,9 @@ export default function Home() {
       <div className="w-full relative py-16 px-10 rounded-xl text-gray-800 overflow-hidden min-h-[500px]">
         {/* Background kanan */}
         <div
-          className="absolute top-0 right-0 h-full w-1/3 rounded-xl"
+          className="absolute inset-0"
           style={{
-            backgroundImage: ` 
-                            url(${bgImage4})`,
+            backgroundImage: `url(${bgImage4})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -87,7 +80,16 @@ export default function Home() {
         ></div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-slate-50/70 z-0"></div>
+        <div className="absolute inset-0 bg-white/40 z-0"></div>
+
+        {/* Top Gradient */}
+        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-white/90 to-transparent z-10" />
+
+        {/* Bottom Gradient */}
+        <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white/90 to-transparent z-10" />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 z-0"></div>
 
         {/* Konten berdasarkan currentSlide */}
         <AnimatePresence mode="wait">
@@ -121,7 +123,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-8 flex justify-center">
-                  <button className="px-6 py-3 rounded-full border border-black text-black bg-transparent hover:bg-slate-700 hover:text-white transition duration-300">
+                  <button className="px-6 py-3 rounded-full border border-black text-black bg-transparent hover:bg-slate-700 z-0 hover:text-white transition duration-300">
                     Pelajari Selengkapnya
                   </button>
                 </div>
@@ -170,7 +172,7 @@ export default function Home() {
           ></div>
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-slate-50/70 z-0"></div>
+          <div className="absolute inset-0 bg-white/80 z-0"></div>
 
           {/* Konten berdasarkan currentSlide */}
           <AnimatePresence mode="wait">
