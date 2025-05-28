@@ -216,12 +216,12 @@ export default function Home() {
           className="relative z-10"
         >
           <>
-          <h2 className="text-2xl font-bold mt-6 mb-6 text-center text-gray-700">Jembatan udara Indonesia, pintu gerbang menuju dunia.
+          {/* <h2 className="text-2xl font-bold mt-6 mb-6 text-center text-gray-700">Jembatan udara Indonesia, pintu gerbang menuju dunia.
             InJourney Airports menghadirkan layanan standar dunia di<span className='text-4xl font-bold text-blue-600'> 20</span><span className='text-lg text-blue-600'> wilayah</span>
           </h2>
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">InJourney Airports mengukuhkan posisinya sebagai perusahaan bandara
             terbesar ke<span className='text-4xl font-bold text-blue-600'> 20</span><span className='text-lg text-blue-600'> di indonesia</span>
-          </h2>
+          </h2> */}
           </>
         </motion.div>
       </div>
