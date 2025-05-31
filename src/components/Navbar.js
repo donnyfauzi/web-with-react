@@ -38,7 +38,7 @@ export default function Navbar() {
           <a href="/" className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-blue-600 hover:text-white hover:underline text-xl font-extrabold' : 'text-white hover:text-yellow-300 hover:underline text-xl font-extrabold'}`}>
             Beranda
           </a>
-          <a href="/about" className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-blue-600 hover:text-white hover:underline text-xl font-extrabold' : 'text-white hover:text-yellow-300 hover:underline text-xl font-extrabold'}`}>
+          <a href="/tentang" className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-blue-600 hover:text-white hover:underline text-xl font-extrabold' : 'text-white hover:text-yellow-300 hover:underline text-xl font-extrabold'}`}>
             Tentang Kami
           </a>
           <a href="/services" className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${scrolled ? 'text-blue-600 hover:text-white hover:underline text-xl font-extrabold' : 'text-white hover:text-yellow-300 hover:underline text-xl font-extrabold'}`}>
@@ -57,7 +57,7 @@ export default function Navbar() {
             <a href="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-50">
               Beranda
             </a>
-            <a href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-50">
+            <a href="/tentang" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-50">
               Tentang Kami
             </a>
             <a href="/services" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-indigo-50">

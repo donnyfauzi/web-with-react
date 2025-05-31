@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './components/Loading';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Tentang from './pages/Tentang';
 import Footer from './components/Footer';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); 
+    }, 1500); 
 
     return () => clearTimeout(timer);
   }, []);
@@ -27,6 +28,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/tentang" element={<Tentang />} />
           </Routes>
           <Footer />
         </>

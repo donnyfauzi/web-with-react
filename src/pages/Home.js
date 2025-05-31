@@ -66,6 +66,7 @@ export default function Home() {
 
   return (
     <div className="relative"> 
+      
       {/* Hero Gambar/Video */}
       <div className="relative w-full h-screen pt-16 overflow-hidden rounded-br-[300px] rounded-tl-[300px]">
         {slides[currentSlide].type === 'video' ? (
