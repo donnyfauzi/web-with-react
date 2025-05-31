@@ -8,6 +8,7 @@ import bgImage1 from '../assets/images/hero/bg1.jpeg';
 import bgImage2 from '../assets/images/hero/bg2.png';
 import bgImage4 from '../assets/images/hero/bg-batik2.png';
 import bgImage5 from '../assets/images/hero/foto-content2.jpg';
+import logo1 from '../assets/images/logo/Logo_Vidio.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
@@ -19,6 +20,19 @@ const slides = [
   { type: 'image', src: bgImage1 },
   { type: 'image', src: bgImage2 },
 ];
+
+const clients = [
+  { logo: logo1, name: 'Angkasa Pura I' },
+  { logo: logo1, name: 'Angkasa Pura II' },
+  { logo: logo1, name: 'InJourney' },
+  { logo: logo1, name: 'Garuda Indonesia' },
+  { logo: logo1, name: 'Citilink' },
+  { logo: logo1, name: 'Pertamina Aviation' },
+  { logo: logo1, name: 'Telkom Indonesia' },
+  { logo: logo1, name: 'Bank Mandiri' },
+  { logo: logo1, name: 'BNI' },
+];
+
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -208,7 +222,7 @@ export default function Home() {
       </div>
 
       {/* Hero Konten 3 */}
-      <div className="bg-teal-900 text-white py-12 px-6 relative overflow-hidden">
+      <div className="bg-teal-700 text-white py-12 px-6 relative overflow-hidden min-h-[270px]">
         <h2 className="text-3xl font-bold text-center mb-8 text-teal-500">Fakta Menarik</h2>
 
         <div className="relative max-w-6xl mx-auto flex items-center justify-between gap-4">
@@ -267,6 +281,41 @@ export default function Home() {
         <div className="mt-6 flex justify-center gap-2">
           {[0, 1, 2].map((idx) => ( <div key={idx} className={`w-3 h-3 rounded-full ${idx === currentIndex ? 'bg-white' : 'bg-white/40'}`}/>))}
         </div>
+      </div>
+
+      {/* Hero Konten 4 */}
+      <div className="bg-gradient-to-r from-teal-800 to-cyan-600 text-white py-12 px-6 relative overflow-hidden min-h-[500px]">
+        <motion.div
+            className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 place-items-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+          >
+          {clients.map((client, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 2, ease: 'easeOut' }}>
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-20 w-auto object-contain mb-3 drop-shadow-md"
+              />
+              <p className="text-center text-white font-semibold">{client.name}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
       
       {/* Contact Us Floating Button */}
