@@ -285,6 +285,7 @@ export default function Home() {
 
       {/* Hero Konten 4 */}
       <div className="bg-gradient-to-r from-teal-800 to-cyan-600 text-white py-12 px-6 relative overflow-hidden min-h-[500px]">
+        <h1 className="text-2xl mb-5 text-center text-cyan-900 font-bold">Our Clients</h1>
         <motion.div
             className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 place-items-center"
             initial="hidden"
@@ -307,12 +308,8 @@ export default function Home() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 2, ease: 'easeOut' }}>
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="h-20 w-auto object-contain mb-3 drop-shadow-md"
-              />
-              <p className="text-center text-white font-semibold">{client.name}</p>
+              <img src={client.logo} alt={client.name} className="h-20 w-auto object-contain mb-3 drop-shadow-md"/>
+              <p className="text-center text-cyan-950 font-bold">{client.name}</p>
             </motion.div>
           ))}
         </motion.div>
